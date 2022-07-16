@@ -30,7 +30,7 @@
       charset="utf-8"
       src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     ></script>
-<script>
+<!-- <script>
       (async () => {
         let liffId = "1657132355-K9v9jD68";
         await liff.init({ liffId: liffId });
@@ -41,7 +41,7 @@
           }
         });
       })();
- </script>
+ </script> -->
   <div class="container mt-3">
 <div class="card">
   <div class="card-body">
@@ -55,13 +55,20 @@
             onclick="closeWin()"
             class="btn btn-success"
           />
+<input type="button" class="btn btn-success"
+                     style="font-weight: bold; display: inline;"
+                     value="Close"
+                     onclick="closeMe()">
+
 </center>
 </div>
 </div>
     </div>
 <script>
-function closeWin() {
- setTimeout(window.close, 0);
+function closeMe()
+{
+    window.opener = self;
+    window.close();
 }
                     
 </script>
