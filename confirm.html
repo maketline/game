@@ -26,6 +26,22 @@
     </style>
   </head>
 <body>
+    <script
+      charset="utf-8"
+      src="https://static.line-scdn.net/liff/edge/2/sdk.js"
+    ></script>
+<script>
+      (async () => {
+        let liffId = "1654001910-pbkZE3OM";
+        await liff.init({ liffId: liffId });
+
+        liff.ready.then(() => {
+          if (!liff.isLoggedIn()) {
+            liff.login();
+          }
+        });
+      })();
+ </script>
   <div class="container mt-3">
 <div class="card">
   <div class="card-body">
