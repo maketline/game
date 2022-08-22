@@ -28,7 +28,7 @@
         <form class="m-4" id="registform">
             <div class="row justify-content-center">
                 <div class="col text-center">
-                    <h3 class="text-blue fw-bold" >ฟอร์มส่งสลิป งาน Hua Hin</h3>
+                    <h3 class="text-blue fw-bold" >ร่วมกิจกรรมทายหวย</h3>
                 </div>
             </div>
             <div class="row justify-content-center mt-2">
@@ -154,114 +154,175 @@
                                         // วาง Json ที่ copy จาก flex simulator ตรงนี้
  {
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": response.url.replace("&export=download",""),
-    "size": "full",
-    "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "http://linecorp.com/"
-    }
-  },
   "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
       {
         "type": "text",
-        "text": "เรื่อง" + $("#position").val(),
+        "text": "ส่งทายหวยเรียบร้อยแล้ว!",
         "weight": "bold",
-        "size": "xl"
+        "color": "#1DB446",
+        "size": "sm"
+      },
+      {
+        "type": "text",
+        "text": "ขอให้ท่านโชคดี",
+        "weight": "bold",
+        "size": "xxl",
+        "margin": "md",
+        "align": "center"
+      },
+      {
+        "type": "separator",
+        "margin": "xxl"
       },
       {
         "type": "box",
         "layout": "vertical",
-        "margin": "lg",
+        "margin": "xxl",
         "spacing": "sm",
         "contents": [
           {
+            "type": "text",
+            "text": "นี่คือเลขที่ท่านทาย โปรดเก็บไว้เป็นหลักฐาน",
+            "weight": "bold",
+            "size": "sm",
+            "margin": "md"
+          },
+          {
+            "type": "separator",
+            "margin": "xxl"
+          },
+          {
             "type": "box",
-            "layout": "baseline",
-            "spacing": "sm",
+            "layout": "horizontal",
+            "margin": "xxl",
             "contents": [
               {
                 "type": "text",
-                "text": "Place",
-                "color": "#aaaaaa",
-                "size": "sm",
-                "flex": 1
+                "text": "เลขที่1:",
+                "size": "xl",
+                "color": "#555555"
               },
               {
                 "type": "text",
-                "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
-                "wrap": true,
-                "color": "#666666",
-                "size": "sm",
-                "flex": 5
+                "text": "11",
+                "size": "xl",
+                "color": "#111111",
+                "align": "center"
               }
             ]
           },
           {
             "type": "box",
-            "layout": "baseline",
-            "spacing": "sm",
+            "layout": "horizontal",
             "contents": [
               {
                 "type": "text",
-                "text": "Time",
-                "color": "#aaaaaa",
-                "size": "sm",
-                "flex": 1
+                "text": "เลขที่2:",
+                "size": "xl",
+                "color": "#555555"
               },
               {
                 "type": "text",
-                "text": "10:00 - 23:00",
-                "wrap": true,
-                "color": "#666666",
-                "size": "sm",
-                "flex": 5
+                "text": "22",
+                "size": "xl",
+                "color": "#111111",
+                "align": "center"
               }
             ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "เลขที่3:",
+                "size": "xl",
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "32",
+                "size": "xl",
+                "color": "#111111",
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "เลขที่4:",
+                "size": "xl",
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "44",
+                "size": "xl",
+                "color": "#111111",
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "เลขที่4:",
+                "size": "xl",
+                "color": "#555555"
+              },
+              {
+                "type": "text",
+                "text": "55",
+                "size": "xl",
+                "color": "#111111",
+                "align": "center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "xxl"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "md",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ผู้ส่ง:",
+            "size": "xs",
+            "color": "#aaaaaa",
+            "flex": 0
+          },
+          {
+            "type": "text",
+            "text": "#743289384279",
+            "color": "#aaaaaa",
+            "size": "xs",
+            "align": "end"
           }
         ]
       }
     ]
   },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "primary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": ""+$("#lname").val(),
-          "uri": "https://linecorp.com"
-        }
-      },
-      {
-        "type": "button",
-        "style": "primary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "WEBSITE",
-          "uri": "https://linecorp.com"
-        }
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [],
-        "margin": "sm"
-      }
-    ],
-    "flex": 0
+  "styles": {
+    "footer": {
+      "separator": true
+    }
   }
 }
 //   {
