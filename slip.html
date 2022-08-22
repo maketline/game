@@ -39,6 +39,8 @@
                  <input type="tel" class="form-control" id="tel" name="tel" value=""placeholder="" required />
                  <label for="name" class="form-label" style="font-size:20px;">บอกชื่อสินค้าของร้านเรามา1อย่าง</label>                  
                  <input type="text" class="form-control" id="productname" name="productname" value=""placeholder="" required />
+                  <label for="name" class="form-label" style="font-size:20px;">เลขที่1</label>                  
+                 <input type="tel" class="form-control" id="number1" name="number1" value=""placeholder="" required />
                 </div>
               <div class="justify-content-center">
             </div>
@@ -214,7 +216,7 @@
               },
               {
                 "type": "text",
-                "text": "11",
+                "text": ""+$("#number1").val(),
                 "size": "xl",
                 "color": "#111111",
                 "align": "center"
