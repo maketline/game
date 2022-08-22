@@ -33,10 +33,12 @@
             </div>
             <div class="row justify-content-center mt-2">
                 <div class="col-md-3 mt-3">
-                 <label for="name" class="form-label" style="font-size:20px;">ส่งสลิปโอนเงิน ค่าสมัครของ</label>                  
+                 <label for="name" class="form-label" style="font-size:20px;">ชื่อผู้ส่ง</label>                  
                  <input type="text" class="form-control" id="position" name="position" value=""placeholder="" required />
-                  <label for="name" class="form-label" style="font-size:20px;">ส่งสลิปโอนเงิน ค่าสมัครของ</label>                  
+                  <label for="name" class="form-label" style="font-size:20px;">เบอร์โทร</label>                  
                  <input type="text" class="form-control" id="lname" name="lname" value=""placeholder="" required />
+                 <label for="name" class="form-label" style="font-size:20px;">บอกชื่อสินค้าของร้านเรามา1อย่าง</label>                  
+                 <input type="text" class="form-control" id="details" name="details" value=""placeholder="" required />
                 </div>
               <div class="justify-content-center">
             </div>
@@ -46,7 +48,7 @@
                     <div class="col-md mt-2 text-center">
                         <img id="img-upload" width="150px" />
                     </div>
-                    <label class="form-label">หลักฐานการโอนเงิน</label>
+                    <label class="form-label">แนบรูปสินค้าที่ท่านชอบ</label>
                     <input type="file" name="img_bill" accept="image/*" class="form-control" id="img_bill" required />
                 </div>
             </div>
@@ -190,7 +192,7 @@
           },
           {
             "type": "text",
-            "text": "สินค้าที่ท่านชอบคือ:",
+            "text": "สินค้าที่ท่านชอบคือ:"+$("#lname").val(),
             "weight": "bold",
             "size": "sm",
             "margin": "md"
