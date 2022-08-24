@@ -31,7 +31,7 @@
 <body>
 <!--   เริ่มฟอร์ม   -->
     <div class="container">
-	     <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">  
+  <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">  
   <p id="userId"></p>
   <center><p id="displayName"></p></center>
   <p id="statusMessage"></p>
@@ -57,8 +57,8 @@
 
  logout
      const accessToken = liff.getAccessToken();
-if (accessToken) {
-   fetch("https://api...", {
+     if (accessToken) {
+     fetch("https://{tenant}.auth0.com/api/v2/", {
      headers: {
        "Content-Type": "application/json",
        Authorization: `Bearer ${accessToken}`
