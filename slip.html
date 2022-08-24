@@ -557,22 +557,22 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
 // }
                                         ///ปิด flex ตรงนี้
                                     }
-                                ])
+                                ])' 
                           //sendMessage เข้าไลน์ แบบข้อความธรรมดา
-//                           liff.sendMessages([
-//                 {
-//                   type: "text",
-//                   text: ""+ $("#position").val()
-//                 },
-//                   {
-//                   type: "text",
-//                   text: ""+ $("#lname").val()
-//                 },
-//                 {
-//                   type: "text",
-//                   text: "" +response.url
-//                 }
-//               ])
+                          liff.sendMessages([
+                {
+                  type: "text",
+                  text: ""+ $("#position").val()
+                },
+                  {
+                  type: "text",
+                  text: profile.displayName
+                },
+                {
+                  type: "text",
+                  text: "" +response.url
+                }
+              ])
                           
                           
                                 .then(() => {
