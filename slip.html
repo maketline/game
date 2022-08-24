@@ -29,12 +29,48 @@
 	</style>
 
 <body>
+  <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">  
+  <p id="userId"></p>
+  <center><p id="displayName"></p></center>
+  <p id="statusMessage"></p>
+  <p id="getDecodedIDToken"></p>
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script>
+     function runApp() {
+       liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
+        document.getElementById("displayName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้
+        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;  // แสดงสถานะของผู้ใช้ Line
+        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+       }).catch(err => console.error(err));
+    }
+     liff.init({ liffId: "1654032238-AJNQ68xd" }, () => { // นำ LIFF ID มาใส่
+       if (liff.isLoggedIn()) {
+         runApp()
+       } else {
+         liff.login();
+      }
+     }, err => console.error(err.code, error.message));
+
+ logout
+     const accessToken = liff.getAccessToken();
+if (accessToken) {
+   fetch("https://api...", {
+     headers: {
+       "Content-Type": "application/json",
+       Authorization: `Bearer ${accessToken}`
+     }
+
+   });
+ }
+
 <!--   เริ่มฟอร์ม   -->
     <div class="container">
 		<div class="col-lg-6 col-md-8 mx-auto mt-2">
 			<nav class="navbar navbar-expand-lg navbar-dark bd-indigo-500">
 				<div class="container">
-					<h6 class="Sarabun text-white"><i class="fas fa-address-book"></i>ส่งผลทายหวยเลขท้าย2ตัว
+					<h6 class="Sarabun text-white"><i class="fas fa-address-book"></i>ส่งผลทายหวยเลขท้าย2ตัว<br>
           งวด<script language="javascript">
 now = new Date();
 var thday = new Array ("อาทิตย์","จันทร์",
