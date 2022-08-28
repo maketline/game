@@ -225,10 +225,10 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
         $("#img_bill").on("change", () => {
             $("#img-upload").show();
             let file = $("#img_bill").prop("files")[0];
-            if (file != undefined) {
-                let fr = new FileReader();
-                fr.readAsArrayBuffer(file);
-                fr.onload = f => {
+//             if (file != undefined) {
+//                 let fr = new FileReader();
+//                 fr.readAsArrayBuffer(file);
+//                 fr.onload = f => {
                     img_bill = JSON.stringify([...new Int8Array(f.target.result)]);
                 };
             }
