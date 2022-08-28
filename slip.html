@@ -114,7 +114,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
     </div>
      <div class="form-group col-md-6">
       <label for="number1">เบอร์โทรติดต่อ</label>
-      <input type="tel" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10"  value"0000000000"required>
+      <input type="tel" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10"  value"111111111" required>
     </div>
 <!--        <div class="form-group col-md-6">
       <label for="number1">บอกชื่อสินค้าของร้านเรามา1อย่าง</label>
@@ -123,23 +123,23 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
     
     <div class="form-group col-md-2">
       <label for="number1">เลขที่1</label>
-      <input type="tel" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่1" id="number1" name="number1" maxlength="2"  value"00"required>
+      <input type="tel" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่1" id="number1" name="number1" maxlength="2"  value"11" required>
     </div>
       <div class="form-group col-md-2">
       <label for="number2">เลขที่2</label>
-      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่2" id="number2" name="number2" maxlength="2" value"00" required>
+      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่2" id="number2" name="number2" maxlength="2" value"11" required>
     </div>
       <div class="form-group col-md-2">
       <label for="number3">เลขที่3</label>
-      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่3" id="number3" name="number3" maxlength="2" value"00" required>
+      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่3" id="number3" name="number3" maxlength="2" value"11" required>
     </div>
     <div class="form-group col-md-2">
       <label for="number4">เลขที่4</label>
-      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่4" id="number4" name="number4" maxlength="2" value"00" required>
+      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่4" id="number4" name="number4" maxlength="2" value"11" required>
     </div>
     <div class="form-group col-md-2">
       <label for="number5">เลขที่5</label>
-      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่5" id="number5" name="number5" maxlength="2" value"00" required>
+      <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่5" id="number5" name="number5" maxlength="2" value"11" required>
     </div>
   </div>
    <div class="row justify-content-center">
@@ -188,12 +188,12 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                 } else {
                     let profile = await liff.getProfile()
                     $("#img-upload").hide();
-                    // let url = `${scriptURL}?opt=getname&uid=${profile.userId}`;
-                    // fetch(url)
-                    //     .then(response => response.json())
-                    //     .then(response => {
-                    //         setName(response);
-                    //     });
+                    let url = `${scriptURL}?opt=getname&uid=${profile.userId}`;
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(response => {
+                            setName(response);
+                        });
                 }
             });
             //firebaseInit();
@@ -220,19 +220,19 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
     </script>
     <script>
     //สร้างไฟล์รูปภาพ
-        let img_bill;
-        let form = $("form")[0];
-        $("#img_bill").on("change", () => {
-            $("#img-upload").show();
-            let file = $("#img_bill").prop("files")[0];
-            if (file != undefined) {
-                let fr = new FileReader();
-                fr.readAsArrayBuffer(file);
-                fr.onload = f => {
-                    img_bill = JSON.stringify([...new Int8Array(f.target.result)]);
-                };
-            }
-        });
+//         let img_bill;
+//         let form = $("form")[0];
+//         $("#img_bill").on("change", () => {
+//             $("#img-upload").show();
+//             let file = $("#img_bill").prop("files")[0];
+//             if (file != undefined) {
+//                 let fr = new FileReader();
+//                 fr.readAsArrayBuffer(file);
+//                 fr.onload = f => {
+//                     img_bill = JSON.stringify([...new Int8Array(f.target.result)]);
+//                 };
+//             }
+//         });
         form.addEventListener("submit", e => {
             e.preventDefault();
             $("#btn_submit").html(
@@ -240,9 +240,9 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
             );
 
             let formdata = new FormData(form);
-            formdata.set("img_bill", img_bill);
-            formdata.append("billName", $("#img_bill").prop("files")[0]?.name);
-            formdata.append("billMimeType", $("#img_bill").prop("files")[0]?.type);
+//             formdata.set("img_bill", img_bill);
+//             formdata.append("billName", $("#img_bill").prop("files")[0]?.name);
+//             formdata.append("billMimeType", $("#img_bill").prop("files")[0]?.type);
             console.log(...formdata);
             fetch(scriptURL, {
                 method: "POST",
@@ -285,17 +285,17 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
         "type": "separator",
         "margin": "xxl"
       },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "margin": "xxl",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "image",
-            "url": response.url.replace("&export=download",""),
-            "size": "md"
-          },
+//       {
+//         "type": "box",
+//         "layout": "vertical",
+//         "margin": "xxl",
+//         "spacing": "sm",
+//         "contents": [
+//           {
+//             "type": "image",
+//             "url": response.url.replace("&export=download",""),
+//             "size": "md"
+//           },
 //           {
 //             "type": "text",
 // 	    "text": "สินค้าที่ท่านชอบคือ:"+$("#productname").val(),
