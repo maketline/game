@@ -115,6 +115,11 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
      <div class="form-group col-md-6">
       <label for="number1">เบอร์โทรติดต่อ</label>
       <input type="tel" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10"  required>
+    </div>
+       <div class="form-group col-md-6">
+      <label for="number1">บอกชื่อสินค้าของร้านเรามา1อย่าง</label>
+      <input type="text" class="form-control"  placeholder="ระบุชื่อสินค้าร้านร้านที่ท่านรู้จัก" id="productname" name="productname"   required>
+    </div>
     
     <div class="form-group col-md-2">
       <label for="number1">เลขที่1</label>
@@ -137,6 +142,18 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
       <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่5" id="number5" name="number5" maxlength="2"  required>
     </div>
   </div>
+   <div class="row justify-content-center">
+                <div class="col-md-3 mt-3">
+                    <div class="col-md mt-2 text-center">
+                        <img id="img-upload" width="150px" />
+                    </div>
+                    <label class="form-label">แนบรูปสินค้าที่ท่านชอบ</label>
+                    <input type="file" name="img_bill" accept="image/*" class="form-control" id="img_bill" required />
+                </div>
+            </div>
+								<div class="row"> </div>
+								<div class="col"> </div>
+								 <div class="row justify-content-center">
                 <div class="col-md-3 mt-4 text-center">
                     <button class="btn btn-outline-success btn-lg" type="submit" id="btn_submit">
                         บันทึกข้อมูล
@@ -264,6 +281,29 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
         "margin": "md",
         "align": "center"
       },
+      {
+        "type": "separator",
+        "margin": "xxl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "xxl",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "image",
+            "url": response.url.replace("&export=download",""),
+            "size": "md"
+          },
+          {
+            "type": "text",
+            "text": "สินค้าที่ท่านชอบคือ:"+$("#productname").val(),
+            "weight": "bold",
+            "size": "sm",
+            "margin": "md",
+            "color": "#1DB446"
+          },
           {
             "type": "separator",
             "margin": "xxl"
@@ -501,7 +541,6 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                           
                                 .then(() => {
                                     console.log("message sent");
-				    window.location.assign("https://shop.line.me/@tjj3754")
                                     liff.closeWindow();
                                 })
                                 .catch(err => {
@@ -527,7 +566,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                 });
         });
     </script>
-<!--     <script>
+    <script>
         $(document).ready(function () {
             $(document).on("change", ".btn-file :file", function () {
                 var input = $(this),
@@ -567,7 +606,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                 readURL(this);
             });
         });
-    </script> -->
+    </script>
   
   <script>
 var urlParams = new URLSearchParams(window.location.search);
