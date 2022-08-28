@@ -243,6 +243,9 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
 //             formdata.set("img_bill", img_bill);
 //             formdata.append("billName", $("#img_bill").prop("files")[0]?.name);
 //             formdata.append("billMimeType", $("#img_bill").prop("files")[0]?.type);
+	       formdata.set("", img_bill);
+               formdata.append("", $("").prop("files")[0]?.name);
+               formdata.append("billMimeType", $("#").prop("files")[0]?.type);
             console.log(...formdata);
             fetch(scriptURL, {
                 method: "POST",
