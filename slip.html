@@ -160,9 +160,9 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                     </button>
                 </div>
               <div class="justify-content-center">
-            <p class="justify-content-center">
+<!--             <p id="aleart" class="justify-content-center" style display: none;>
               **อย่าปิดหน้านี้ จนกว่าจะบันทึกสำเร็จ**
-              </p>
+              </p> -->
           </div>
             </div>
         </form>
@@ -237,6 +237,9 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
             e.preventDefault();
             $("#btn_submit").html(
                 `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>  ...กำลังบันทึก`
+            );
+		 $("#aleart").html(
+                ` **อย่าปิดหน้านี้ จนกว่าจะบันทึกสำเร็จ**`
             );
 
             let formdata = new FormData(form);
