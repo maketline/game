@@ -142,7 +142,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
       <input type="tel" class="form-control" pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่5" id="number5" name="number5" maxlength="2"  required>
     </div>
   </div>
-   <div class="row justify-content-center">
+<!--    <div class="row justify-content-center">
                 <div class="col-md-3 mt-3">
                     <div class="col-md mt-2 text-center">
                         <img id="img-upload" width="150px" />
@@ -152,7 +152,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                 </div>
             </div>
 								<div class="row"> </div>
-								<div class="col"> </div>
+								<div class="col"> </div> -->
 								 <div class="row justify-content-center">
                 <div class="col-md-3 mt-4 text-center">
                     <button class="btn btn-outline-success btn-lg" type="submit" id="btn_submit">
@@ -281,21 +281,21 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
         "margin": "md",
         "align": "center"
       },
-      {
-        "type": "separator",
-        "margin": "xxl"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "margin": "xxl",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "image",
-            "url": response.url.replace("&export=download",""),
-            "size": "md"
-          },
+//       {
+//         "type": "separator",
+//         "margin": "xxl"
+//       },
+//       {
+//         "type": "box",
+//         "layout": "vertical",
+//         "margin": "xxl",
+//         "spacing": "sm",
+//         "contents": [
+//           {
+//             "type": "image",
+//             "url": response.url.replace("&export=download",""),
+//             "size": "md"
+//           },
 //           {
 //             "type": "text",
 // 	    "text": "สินค้าที่ท่านชอบคือ:"+$("#productname").val(),
