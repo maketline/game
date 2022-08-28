@@ -239,15 +239,15 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                 `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>  ...กำลังบันทึก`
             );
 
-//             let formdata = new FormData(form);
+            let formdata = new FormData(form);
 //             formdata.set("img_bill", img_bill);
 //             formdata.append("billName", $("#img_bill").prop("files")[0]?.name);
 //             formdata.append("billMimeType", $("#img_bill").prop("files")[0]?.type);
-//             console.log(...formdata);
-//             fetch(scriptURL, {
-//                 method: "POST",
-//                 body: formdata
-//             })
+            console.log(...formdata);
+            fetch(scriptURL, {
+                method: "POST",
+                body: formdata
+            })
                 .then(response => response.json())
                 .then(response => {
                     $("#btn_submit").html("บันทึกข้อมูล");
