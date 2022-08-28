@@ -116,6 +116,11 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
       <label for="number1">เบอร์โทรติดต่อ</label>
       <input type="tel" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10"  required>
     </div>
+       <div class="form-group col-md-6">
+      <label for="number1">บอกชื่อสินค้าของร้านเรามา1อย่าง</label>
+      <input type="text" class="form-control"  placeholder="ระบุชื่อสินค้าร้านร้านที่ท่านรู้จัก" id="productname" name="productname"   required>
+    </div>
+    
     <div class="form-group col-md-2">
       <label for="number1">เลขที่1</label>
       <input type="tel" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่1" id="number1" name="number1" maxlength="2"  required>
@@ -293,7 +298,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
           },
           {
             "type": "text",
-            "text": ""
+            "text": "สินค้าที่ท่านชอบคือ:"+$("#productname").val(),
             "weight": "bold",
             "size": "sm",
             "margin": "md",
@@ -301,7 +306,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
           },
           {
             "type": "separator",
-          "margin": "xxl"
+            "margin": "xxl"
           },
           {
             "type": "box",
@@ -536,6 +541,7 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
                           
                                 .then(() => {
                                     console.log("message sent");
+				    window.location.assign("https://shop.line.me/@tjj3754")
                                     liff.closeWindow();
                                 })
                                 .catch(err => {
