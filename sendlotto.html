@@ -57,7 +57,10 @@
 	      <tr><td><b>เบอร์โทรติดต่อ : </b></td>
              <td><input type="text" name="tel" id="tel" required="" /></td>
             </tr>
-                      <tr><td><b>Email : </b></td>
+	    <tr><td><b>เบอร์ที่1 : </b></td>
+             <td><input type="text" name="number1" id="number1" required="" /></td>
+            </tr>
+             <tr><td><b>Email : </b></td>
             <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
@@ -171,7 +174,7 @@
               },
               {
                 "type": "text",
-                "text": "400kcl",
+                "text": ""+ number1.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
