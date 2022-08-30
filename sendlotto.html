@@ -46,7 +46,7 @@
   	<center><br><br>
          <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
-        <img id="upic" name="Upic" width="25%">
+<!--         <img id="upic" name="Upic" width="25%"> -->
 	<img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="50" height="50">	
          <table border="5">	
             <tr><td><b>สวัสดีคุณ : </b></td>
@@ -93,7 +93,7 @@
         liff.getProfile().then(function(profile) {
           const uid = profile.userId;
           const uname = profile.displayName;
-          const upic = profile.pictureUrl;
+          const pictureUrl = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("UName")[0].value = uname;
           document.getElementsByName("Upic")[0].value = upic;
