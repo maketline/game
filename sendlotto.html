@@ -47,6 +47,7 @@
          <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
         <img id="upic" name="Upic" width="25%">
+	<img id="pictureUrl" class="img-circle" alt="Profile" width="50" height="50">	
          <table border="5">	
             <tr><td><b>สวัสดีคุณ : </b></td>
              <td><input type="text" name="UName" id="uname" required="" /></td>
@@ -96,6 +97,7 @@
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("UName")[0].value = uname;
           document.getElementsByName("Upic")[0].value = upic;
+	  document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
         });
       }
 
@@ -106,6 +108,8 @@
           var x = document.getElementById("name");
           var y = document.getElementById("email");
           var z = document.getElementById("phone");
+	  var p = document.getElementById("pictureUrl");
+		
 
 
           liff
@@ -117,7 +121,7 @@
   "type": "bubble",
   "hero": {
     "type": "image",
-      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+      "url": profile.pictureUrl;,  
     "size": "full",
     "aspectRatio": "20:13",
     "aspectMode": "cover",
