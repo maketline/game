@@ -67,6 +67,7 @@
          <input type="submit" name="submit" id ="submit" value="Submit"/>
     </center>
   </form>
+
   <script type="text/javascript">
     
      window.onload = function() {
@@ -114,9 +115,8 @@
             .sendMessages([
               {
                 type: "flex",
-                altText: "This is a Flex Message",
+                altText: "ส่งทายหวย",
                 contents: {
-{
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -278,7 +278,7 @@
       },
       {
         "type": "text",
-        "text": "ชื่อผู้ส่ง : "+ x.value,
+        "text": "ชื่อผู้ส่ง : "+ x.value
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -290,7 +290,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์" + name,
+        "text":  "ชื่อไลน์" + name 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -361,15 +361,15 @@
 //     ]
 //   }
 // }
-//               }
-//             ])
+              }
+            ])
 
-//             .then(function() {
-//               liff.closeWindow();
-//             });
-//             });
-//         });
-//       }
+            .then(function() {
+              liff.closeWindow();
+            });
+            });
+        });
+      }
 
 
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhgOhbI16JmFkjeqpXpBRDf0gagabznglfYcAEjfyQNiBLkIUDBwxLiZDtK8yVHx_onw/exec'
