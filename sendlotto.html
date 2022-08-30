@@ -44,7 +44,7 @@
 <body>
   <form method="post" autocomplete="off" name="google-sheet">
   	<center><br><br>
-         <h1>Registration Form</h1><br>
+         <h1>ทายเลข2ตัว</h1><br>
         <p id="uid" name="Uid"></p>
         <img id="upic" name="Upic" width="25%">
          <table border="5">	
@@ -55,7 +55,7 @@
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
                       <tr><td><b>Email : </b></td>
-            <td><input type="text" name="tel" id="tel"  required="" /></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
             <td><input type="number" name="Phone" id="phone"  required="" /></td>
@@ -64,7 +64,7 @@
            
          </table>
          <br><br>
-         <input type="submit" name="submit" id ="submit" value="Submit"/>
+         <input type="submit" name="submit" id ="submit" value="ส่งผลทาย"/>
     </center>
   </form>
 
@@ -107,7 +107,7 @@
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
-          var y = document.getElementById("tel");
+          var y = document.getElementById("email");
           var z = document.getElementById("phone");
 
 
@@ -290,7 +290,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์: " + name, 
+        "text":  "ชื่อไลน์" + name, 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -302,7 +302,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:" + y.value,,
+        "text": "หมายเลขโทรศัพท์:",
         "wrap": true,
         "size": "sm",
         "align": "start",
