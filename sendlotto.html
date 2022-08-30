@@ -47,6 +47,7 @@
          <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
         <img id="upic" name="Upic" width="25%">
+	 <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">
          <table border="5">	
             <tr><td><b>สวัสดีคุณ : </b></td>
              <td><input type="text" name="UName" id="uname" required="" /></td>
@@ -93,6 +94,7 @@
           const uid = profile.userId;
           const uname = profile.displayName;
           const upic = profile.pictureUrl;
+	  document.getElementById("picURL").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("UName")[0].value = uname;
           document.getElementsByName("Upic")[0].value = upic;
@@ -103,7 +105,7 @@
         //button1
 
         document.getElementById("submit").addEventListener("click", function() {
-          liff.getProfile().then(profile => {
+          liff.getProfile().then(profile => {	
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
@@ -302,7 +304,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ y.value,,
+        "text": "หมายเลขโทรศัพท์:"+ y.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
