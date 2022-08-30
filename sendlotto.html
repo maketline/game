@@ -54,14 +54,14 @@
              <tr><td><b>Name : </b></td>
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
-	    <tr><td><b>Name2 : </b></td>
-             <td><input type="text" name="Name2" id="name" required="" /></td>
+	    <tr><td><b>เบอร์โทร : </b></td>
+             <td><input type="tel" name="tel" id="tel" required="" /></td>
             </tr>
-                      <tr><td><b>Email : </b></td>
-            <td><input type="text" name="Email" id="email"  required="" /></td>
+             <tr><td><b>เบอร์ที่1 : </b></td>
+            <td><input type="tel" name="number1" id="number1"  required="" /></td>
             </tr>
-            <tr><td><b>Phone no. : </b></td>
-            <td><input type="number" name="Phone" id="phone"  required="" /></td>
+            <tr><td><b>เบอร์ที่2 : </b></td>
+            <td><input type="tel" name="number2" id="number2"  required="" /></td>
             </tr>
         
            
@@ -111,8 +111,9 @@
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
-          var y = document.getElementById("email");
-          var z = document.getElementById("phone");
+          var tel = document.getElementById("tel");
+          var number1 = document.getElementById("number1");
+	  var number2 = document.getElementById("number2");
 
 
           liff
@@ -172,7 +173,7 @@
               },
               {
                 "type": "text",
-                "text": "400kcl",
+                "text": ""+ number1.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -196,7 +197,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": ""+ number2.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -261,7 +262,7 @@
               },
               {
                 "type": "text",
-                "text": "หมายเลขที่ทายคือ:",
+                "text": "หมายเลขที่ทายคือ:"
                 "weight": "bold",
                 "margin": "sm",
                 "flex": 0
