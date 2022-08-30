@@ -160,20 +160,22 @@ thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<form id="myForm" onsubmit="handleFormSubmit(this)">
+				<form method="post" autocomplete="off" name="google-sheet"
 					<br>
 					<div class="col-lg-6 col-md-12 mx-auto">
 						<div class="form-row">
 							<div class="form-group col-md-12 center">
 							<div class="form-row">
-                <div class="form-group col-md-6">
-	 <label for="number1">สวัสดีคุณ</label>
-      <input type="text" class="form-control" placeholder="ระบุชื่อของท่าน" name="UName" id="uname" readonly>
+        <div class="form-group col-md-4">
+      <label for="number1">สวัสดี</label>
+<!--       <input type="text" class="form-control" placeholder="ระบุชื่อของท่าน" id="name"  name="name"required> -->
+	<input type="text" name="UName" id="uname" readonly>
     </div>
+     <div class="form-group col-md-4">
       <label for="number1">ชื่อของท่าน</label>
       <input type="text" class="form-control" placeholder="ระบุชื่อของท่าน" id="name"  name="name"required>
     </div>
-     <div class="form-group col-md-6">
+     <div class="form-group col-md-4">
       <label for="number1">เบอร์โทรติดต่อ</label>
       <input type="tel" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10"  required>
     </div>
