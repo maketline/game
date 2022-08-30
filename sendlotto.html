@@ -57,8 +57,8 @@
 	    <tr><td><b>tel : </b></td>
              <td><input type="tel" name="tel" id="tel" required="" /></td>
             </tr>
-             <tr><td><b>number1 : </b></td>
-            <td><input type="tel" name="number1" id="number1"  required="" /></td>
+             <tr><td><b>Email : </b></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
             <td><input type="number" name="Phone" id="phone"  required="" /></td>
@@ -112,7 +112,7 @@
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
           var y = document.getElementById("tel");
-          var number1 = document.getElementById("number1");
+          var z = document.getElementById("phone");
 
 
           liff
@@ -172,7 +172,7 @@
               },
               {
                 "type": "text",
-                "text": + number1.value,
+                "text": "400kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -295,7 +295,7 @@
       },
       {
         "type": "text",
-        "text": "ชื่อไลน์:" + name,
+        "text": "ชื่อไลน์" + name,
         "wrap": true,
         "size": "sm",
         "align": "start",
