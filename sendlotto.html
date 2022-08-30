@@ -48,26 +48,20 @@
         <p id="uid" name="Uid"></p>
          <table border="5">	
 		 <img id="pictureUrl" class="img-circle" alt="Profile" width="50" height="50">	
-             <tr><td><b>ชื่อ-สกุล: </b></td>
+            <tr><td><b>สวัสดีคุณ : </b></td>    
+             <td><input type="text" name="UName" id="uname" required="" /></td>
+            </tr>
+             <tr><td><b>Name : </b></td>
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
-	    <tr><td><b>เบอร์โทร: </b></td>
-             <td><input type="tel" name="tel" id="tel" required="" /></td>
+	    <tr><td><b>Name2 : </b></td>
+             <td><input type="text" name="Name2" id="name" required="" /></td>
             </tr>
-                      <tr><td><b>หมายเลขที่1: </b></td>
-            <td><input type="tel" name="number1" id="number1"  required="" /></td>
+                      <tr><td><b>Email : </b></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
-	     <tr><td><b>หมายเลขที่2: </b></td>
-            <td><input type="tel" name="number2" id="number2"  required="" /></td>
-            </tr>
-            <tr><td><b>หมายเลขที่3: </b></td>
-            <td><input type="tel" name="number3" id="number3"  required="" /></td>
-            </tr>
-	     <tr><td><b>หมายเลขที่4: </b></td>
-            <td><input type="tel" name="number4" id="number4"  required="" /></td>
-            </tr>
-	     <tr><td><b>หมายเลขที่5: </b></td>
-            <td><input type="tel" name="number5" id="number5"  required="" /></td>
+            <tr><td><b>Phone no. : </b></td>
+            <td><input type="number" name="Phone" id="phone"  required="" /></td>
             </tr>
         
            
@@ -97,13 +91,14 @@
           .catch(err => {});
       }
 
-  function getid() {
+      function getid() {
         liff.getProfile().then(function(profile) {
           const uid = profile.userId;
           const uname = profile.displayName;
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
-          document.getElementsByName("UName")[0].value = uname;
+          document.getElementsByName("Name")[0].value = name;
+	  document.getElementsByName("Name2")[0].value = name2;	
           document.getElementsByName("Upic")[0].value = upic;
         });
       }
@@ -113,15 +108,11 @@
 
         document.getElementById("submit").addEventListener("click", function() {
           liff.getProfile().then(profile => {
-          var profile = profile.displayName;
-           var picURL = profile.pictureUrl;
-          var name = document.getElementById("name");
-          var tel = document.getElementById("tel");
-          var number1 = document.getElementById("number1");
-          var number2 = document.getElementById("number2");
-          var number3 = document.getElementById("number3");
-          var number4 = document.getElementById("number4");
- 	  var number5 = document.getElementById("number5");
+            var name = profile.displayName;
+            var picURL = profile.pictureUrl;
+          var x = document.getElementById("name");
+          var y = document.getElementById("email");
+          var z = document.getElementById("phone");
 
 
           liff
@@ -130,6 +121,7 @@
                 type: "flex",
                 altText: "ส่งเกมส์ทายหวย",
                 contents: {
+  
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -180,7 +172,7 @@
               },
               {
                 "type": "text",
-                "text": ""+ number1.value,
+                "text": "400kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -204,7 +196,7 @@
               },
               {
                 "type": "text",
-                "text": ""+ number2.value,
+                "text": "550kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -228,7 +220,7 @@
               },
               {
                 "type": "text",
-                "text": ""+ number3.value,
+                "text": "550kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -252,7 +244,7 @@
               },
               {
                 "type": "text",
-                "text": ""+ number4.value,
+                "text": "550kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -276,7 +268,7 @@
               },
               {
                 "type": "text",
-                "text": ""+ number5.value,
+                "text": "550kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -291,7 +283,7 @@
       },
       {
         "type": "text",
-        "text": "ชื่อผู้ส่ง : "+ name.value,
+        "text": "ผู้ส่ง:"+ x.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -303,7 +295,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์:" + profile, 
+        "text": "ชื่อไลน์:" + name,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -315,7 +307,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ tel.value,
+        "text": "หมายเลขโทรศัพท์:",
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -350,7 +342,11 @@
       }
     ]
   }
-}
+}		
+			
+			
+			
+			
 //   "type": "bubble",
 //   "hero": {
 //     "type": "image",
