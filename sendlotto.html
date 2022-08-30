@@ -44,24 +44,27 @@
 <body>
   <form method="post" autocomplete="off" name="google-sheet">
   	<center><br><br>
-         <h1>ระบบลงทะเบียน</h1><br>
+         <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
+        <img id="upic" name="Upic" width="25%">
          <table border="5">	
-		 <img id="pictureUrl" class="img-circle" alt="Profile" width="50" height="50">	
-            <tr><td><b>สวัสดีคุณ : </b></td>    
+            <tr><td><b>สวัสดีคุณ : </b></td>
              <td><input type="text" name="UName" id="uname" required="" /></td>
             </tr>
              <tr><td><b>Name : </b></td>
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
-	    <tr><td><b>tel : </b></td>
-             <td><input type="tel" name="tel" id="tel" required="" /></td>
+                      <tr><td><b>Email : </b></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
-         
+            <tr><td><b>Phone no. : </b></td>
+            <td><input type="number" name="Phone" id="phone"  required="" /></td>
+            </tr>
+        
            
          </table>
          <br><br>
-         <input type="submit" name="submit" id ="submit" value="ส่ง"/>
+         <input type="submit" name="submit" id ="submit" value="Submit"/>
     </center>
   </form>
 
@@ -91,13 +94,12 @@
           const uname = profile.displayName;
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
-          document.getElementsByName("Name")[0].value = name;
-	  document.getElementsByName("tel")[0].value = tel;
-	  document.getElementsByName("number1")[0].value = number1;		
+          document.getElementsByName("UName")[0].value = uname;
+          document.getElementsByName("Upic")[0].value = upic;
         });
       }
 
-      function testclick() {
+       function testclick() {
         //button1
 
         document.getElementById("submit").addEventListener("click", function() {
@@ -105,17 +107,16 @@
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
-          var tel = document.getElementById("tel");
-          var number1 = document.getElementById("number1");
+          var y = document.getElementById("email");
+          var z = document.getElementById("phone");
 
 
           liff
             .sendMessages([
               {
                 type: "flex",
-                altText: "ส่งเกมส์ทายหวย",
+                altText: "ส่งทายหวยเลขท้าย2ตัว",
                 contents: {
-  
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -166,7 +167,7 @@
               },
               {
                 "type": "text",
-                "text": + number.value,
+                "text": "400kcl",
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -277,7 +278,7 @@
       },
       {
         "type": "text",
-        "text": "ผู้ส่ง:"+ name.value,
+        "text": "ชื่อผู้ส่ง : "+ x.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -289,7 +290,7 @@
       },
       {
         "type": "text",
-        "text": "ชื่อไลน์" + name,
+        "text":  "ชื่อไลน์" + name,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -301,7 +302,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ tel.value,
+        "text": "หมายเลขโทรศัพท์:",
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -336,34 +337,7 @@
       }
     ]
   }
-}		
-			
-			
-			
-			
-//   "type": "bubble",
-//   "hero": {
-//     "type": "image",
-//       "url": ""+picURL,
-//     "size": "full",
-//     "aspectRatio": "20:13",
-//     "aspectMode": "cover",
-//     "action": {
-//       "type": "uri",
-//       "uri": "http://linecorp.com/"
-//     }
-//   },
-//   "body": {
-//     "type": "box",
-//     "layout": "vertical",
-//     "contents": [
-//       {
-//         "type": "text",
-//         "text": "สวัสดีคุณ" + name + "Name : "+ x.value
-//       }
-//     ]
-//   }
-// }
+}
               }
             ])
 
@@ -373,6 +347,7 @@
             });
         });
       }
+
 
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhgOhbI16JmFkjeqpXpBRDf0gagabznglfYcAEjfyQNiBLkIUDBwxLiZDtK8yVHx_onw/exec'
             const form = document.forms['google-sheet']
