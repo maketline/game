@@ -43,6 +43,42 @@
   </head>
 <body>
   <form method="post" autocomplete="off" name="google-sheet">
+	  <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">
+  <p id="userId"></p>
+  <center><p id="displayName"></p></center>
+  <p id="statusMessage"></p>
+  <p id="getDecodedIDToken"></p> 
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script>
+    function runApp() {
+      liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
+        document.getElementById("displayName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้
+        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;  // แสดงสถานะของผู้ใช้ Line
+        //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+      }).catch(err => console.error(err));
+    }
+    liff.init({ liffId: "1657132355-8EP0YyAo" }, () => { // นำ LIFF ID มาใส่
+      if (liff.isLoggedIn()) {
+        runApp()
+      } else {
+        liff.login();
+      }
+    }, err => console.error(err.code, error.message));
+
+// logout
+    const accessToken = liff.getAccessToken();
+if (accessToken) {
+  fetch("https://api...", {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`
+    }
+    //...
+  });
+}
+  </script>
   	<center><br><br>
          <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
