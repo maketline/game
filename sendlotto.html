@@ -110,10 +110,13 @@
           liff.getProfile().then(profile => {
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
-          var x = document.getElementById("name");
-          var y = document.getElementById("email");
-          var z = document.getElementById("phone");
-
+          var lname = document.getElementById("name");
+          var tel = document.getElementById("tel");
+          var number1 = document.getElementById("number1");
+	  var number2 = document.getElementById("number2");
+	  var number3 = document.getElementById("number3");
+	  var number4 = document.getElementById("number4");
+	  var number5 = document.getElementById("number5");
 
           liff
             .sendMessages([
@@ -172,7 +175,7 @@
               },
               {
                 "type": "text",
-                "text": "400kcl",
+                "text": + number1.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -196,7 +199,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": + number2.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -220,7 +223,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": + number3.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -244,7 +247,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": + number4.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -268,7 +271,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": + number5.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -283,7 +286,7 @@
       },
       {
         "type": "text",
-        "text": "ผู้ส่ง:"+ x.value,
+        "text": "ผู้ส่ง:"+ lname.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -307,7 +310,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:",
+        "text": "หมายเลขโทรศัพท์:"+ tel.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
