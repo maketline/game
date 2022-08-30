@@ -47,7 +47,6 @@
          <h1>Registration Form</h1><br>
         <p id="uid" name="Uid"></p>
         <img id="upic" name="Upic" width="25%">
-	 <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">
          <table border="5">	
             <tr><td><b>สวัสดีคุณ : </b></td>
              <td><input type="text" name="UName" id="uname" required="" /></td>
@@ -56,7 +55,7 @@
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
                       <tr><td><b>Email : </b></td>
-            <td><input type="tel" name="Tel" id="tel"  required="" /></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
             <td><input type="number" name="Phone" id="phone"  required="" /></td>
@@ -68,7 +67,7 @@
          <input type="submit" name="submit" id ="submit" value="Submit"/>
     </center>
   </form>
-
+ <img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">
   <p id="userId"></p>
   <center><p id="displayName"></p></center>
   <p id="statusMessage"></p>
@@ -104,7 +103,6 @@ if (accessToken) {
   });
 }
   </script>
-
   <script type="text/javascript">
     
      window.onload = function() {
@@ -140,11 +138,11 @@ if (accessToken) {
         //button1
 
         document.getElementById("submit").addEventListener("click", function() {
-          liff.getProfile().then(profile => {	
+          liff.getProfile().then(profile => {
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
-          var y = document.getElementById("tel");
+          var y = document.getElementById("email");
           var z = document.getElementById("phone");
 
 
@@ -152,8 +150,9 @@ if (accessToken) {
             .sendMessages([
               {
                 type: "flex",
-                altText: "ส่งทายหวยเลขท้าย2ตัว",
+                altText: "This is a Flex Message",
                 contents: {
+{
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -315,7 +314,7 @@ if (accessToken) {
       },
       {
         "type": "text",
-        "text": "ชื่อผู้ส่ง : "+ x.value,
+        "text": "ชื่อผู้ส่ง : "+ x.value
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -327,7 +326,7 @@ if (accessToken) {
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์: " + name,
+        "text":  "ชื่อไลน์" + name 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -339,7 +338,7 @@ if (accessToken) {
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ y.value,
+        "text": "หมายเลขโทรศัพท์:",
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -368,22 +367,45 @@ if (accessToken) {
         "margin": "xxl",
         "action": {
           "type": "uri",
-          "label": "ส่งอีกครั้ง",
-          "uri": "https://liff.line.me/1656079273-QPXgqeqZa"
+          "label": "ชมสินค้าของร้านเรา",
+          "uri": "https://shop.line.me/@tjj3754a"
         }
       }
     ]
   }
 }
-              }
-            ])
+//   "type": "bubble",
+//   "hero": {
+//     "type": "image",
+//       "url": ""+picURL,
+//     "size": "full",
+//     "aspectRatio": "20:13",
+//     "aspectMode": "cover",
+//     "action": {
+//       "type": "uri",
+//       "uri": "http://linecorp.com/"
+//     }
+//   },
+//   "body": {
+//     "type": "box",
+//     "layout": "vertical",
+//     "contents": [
+//       {
+//         "type": "text",
+//         "text": "สวัสดีคุณ" + name + "Name : "+ x.value
+//       }
+//     ]
+//   }
+// }
+//               }
+//             ])
 
-            .then(function() {
-              liff.closeWindow();
-            });
-            });
-        });
-      }
+//             .then(function() {
+//               liff.closeWindow();
+//             });
+//             });
+//         });
+//       }
 
 
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhgOhbI16JmFkjeqpXpBRDf0gagabznglfYcAEjfyQNiBLkIUDBwxLiZDtK8yVHx_onw/exec'
