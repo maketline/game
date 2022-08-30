@@ -55,16 +55,16 @@
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
 	      <tr><td><b>เบอร์โทรติดต่อ : </b></td>
-             <td><input type="text" name="tel" id="tel" required="" /></td>
+             <td><input type="number" name="tel" id="tel" required="" /></td>
             </tr>
 	    <tr><td><b>เบอร์ที่1 : </b></td>
-             <td><input type="text" name="number1" id="number1" required="" /></td>
+             <td><input type="number" name="number1" id="number1" required="" /></td>
             </tr>
-             <tr><td><b>Email : </b></td>
-            <td><input type="text" name="Email" id="email"  required="" /></td>
+             <tr><td><b>เบอร์ที่2 : </b></td>
+            <td><input type="number" name="number2" id="number2"  required="" /></td>
             </tr>
-            <tr><td><b>Phone no. : </b></td>
-            <td><input type="number" name="Phone" id="phone"  required="" /></td>
+            <tr><td><b>เบอร์ที่3 : </b></td>
+            <td><input type="number" name="number2" id="number2"  required="" /></td>
             </tr>
         
            
@@ -114,8 +114,10 @@
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
           var tel = document.getElementById("tel");
-          var y = document.getElementById("email");
-          var z = document.getElementById("phone");
+          var number1 = document.getElementById("number1");
+	  var number2 = document.getElementById("number2);
+//           var y = document.getElementById("email");
+//           var z = document.getElementById("phone");
 
 
           liff
@@ -198,7 +200,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": ""+ number2.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -222,7 +224,7 @@
               },
               {
                 "type": "text",
-                "text": "550kcl",
+                "text": "" + number3.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
