@@ -122,29 +122,251 @@
                 type: "flex",
                 altText: "This is a Flex Message",
                 contents: {
+		{
   "type": "bubble",
   "hero": {
     "type": "image",
-      "url": ""+picURL,
+    "url": ""+picURL,
     "size": "full",
     "aspectRatio": "20:13",
     "aspectMode": "cover",
     "action": {
       "type": "uri",
-      "uri": "http://linecorp.com/"
+      "uri": "https://linecorp.com"
     }
   },
   "body": {
     "type": "box",
     "layout": "vertical",
+    "spacing": "md",
+    "action": {
+      "type": "uri",
+      "uri": "https://linecorp.com"
+    },
     "contents": [
       {
         "type": "text",
-        "text": "สวัสดีคุณ" + name + "Name : "+ x.value
+        "text": "ท่านได้ส่งทายหวยเรียบร้อยแล้ว!",
+        "size": "md",
+        "weight": "bold",
+        "color": "#1DB446"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://img.favpng.com/10/13/23/push-button-reset-button-number-numeric-keypad-png-favpng-shqcGgimTiStnrF2tckr9auGh_t.jpg"
+              },
+              {
+                "type": "text",
+                "text": "หมายเลขที่ทายคือ:",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "400kcl",
+                "size": "md",
+                "align": "end",
+                "weight": "bold"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://listimg.pinclipart.com/picdir/s/11-119955_red-number-2-clip-art-png-download.png"
+              },
+              {
+                "type": "text",
+                "text": "หมายเลขที่ทายคือ:",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "550kcl",
+                "size": "md",
+                "align": "end",
+                "weight": "bold"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://cdn.picpng.com/3/figure-3-35405.png"
+              },
+              {
+                "type": "text",
+                "text": "หมายเลขที่ทายคือ:",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "550kcl",
+                "size": "md",
+                "align": "end",
+                "weight": "bold"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://image.shutterstock.com/image-illustration/four-4-number-button-260nw-17020453.jpg"
+              },
+              {
+                "type": "text",
+                "text": "หมายเลขที่ทายคือ:",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "550kcl",
+                "size": "md",
+                "align": "end",
+                "weight": "bold"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://spng.pngfind.com/pngs/s/654-6546690_original-png-clip-art-file-red-button-5.png"
+              },
+              {
+                "type": "text",
+                "text": "หมายเลขที่ทายคือ:",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "550kcl",
+                "size": "md",
+                "align": "end",
+                "weight": "bold"
+              }
+            ],
+            "spacing": "md"
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "ชื่อผู้ส่ง : "+ x.value
+        "wrap": true,
+        "size": "sm",
+        "align": "start",
+        "margin": "sm",
+        "weight": "bold"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text":  "ชื่อไลน์" + name 
+        "wrap": true,
+        "size": "sm",
+        "align": "start",
+        "margin": "sm",
+        "weight": "bold"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "หมายเลขโทรศัพท์:",
+        "wrap": true,
+        "size": "sm",
+        "align": "start",
+        "flex": 0,
+        "weight": "bold"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "นี่คือเลขที่ท่านทาย โปรดเก็บไว้เป็นหลักฐาน",
+        "size": "sm",
+        "align": "center",
+        "color": "#ff3333"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "margin": "xxl",
+        "action": {
+          "type": "uri",
+          "label": "ชมสินค้าของร้านเรา",
+          "uri": "https://shop.line.me/@tjj3754a"
+        }
       }
     ]
   }
 }
+//   "type": "bubble",
+//   "hero": {
+//     "type": "image",
+//       "url": ""+picURL,
+//     "size": "full",
+//     "aspectRatio": "20:13",
+//     "aspectMode": "cover",
+//     "action": {
+//       "type": "uri",
+//       "uri": "http://linecorp.com/"
+//     }
+//   },
+//   "body": {
+//     "type": "box",
+//     "layout": "vertical",
+//     "contents": [
+//       {
+//         "type": "text",
+//         "text": "สวัสดีคุณ" + name + "Name : "+ x.value
+//       }
+//     ]
+//   }
+// }
               }
             ])
 
