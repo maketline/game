@@ -98,7 +98,7 @@
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("Name")[0].value = name;
-	  document.getElementsByName("Name2")[0].value = name2;	
+	  document.getElementsByName("number1")[0].value = number1;		
           document.getElementsByName("Upic")[0].value = upic;
         });
       }
@@ -110,9 +110,9 @@
           liff.getProfile().then(profile => {
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
-          var x = document.getElementById("name");
-          var y = document.getElementById("tel");
-          var z = document.getElementById("phone");
+          var lname = document.getElementById("name");
+          var tel = document.getElementById("tel");
+          var number1 = document.getElementById("number1");
 
 
           liff
@@ -172,7 +172,7 @@
               },
               {
                 "type": "text",
-                "text": "400kcl",
+                "text": + number.value,
                 "size": "md",
                 "align": "end",
                 "weight": "bold"
@@ -283,7 +283,7 @@
       },
       {
         "type": "text",
-        "text": "ผู้ส่ง:"+ x.value,
+        "text": "ผู้ส่ง:"+ lname.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
