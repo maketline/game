@@ -251,13 +251,6 @@
           //button1
   
           document.getElementById("submit").addEventListener("click", function() {
-	Swal.fire({
-  icon: 'success',
-  title: 'ขอให้โชคดี !!',
-  showConfirmButton: false,
-  text: 'ท่านได้ส่งข้อมูลการทายเลขเรียบร้อยแล้วค่ะ',
-  timer: 1500
-  })
             liff.getProfile().then(profile => {
               var name = profile.displayName;
               var picURL = profile.pictureUrl;
@@ -524,7 +517,13 @@
   // }
                 }
               ])
-  
+  Swal.fire({
+  icon: 'success',
+  title: 'ขอให้โชคดี !!',
+  showConfirmButton: false,
+  text: 'ท่านได้ส่งข้อมูลการทายเลขเรียบร้อยแล้วค่ะ',
+  timer: 1500
+  })
               .then(function() {
                 liff.closeWindow();
               });
