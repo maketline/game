@@ -61,7 +61,7 @@
             <td><input type="tel" name="number1" id="number1"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
-   ?_?         <td><input type="number" name="" id="phone"  required="" /></td>
+   ?_?         <td><input type="number" name="phone" id="phone"  required="" /></td>
             </tr>
         
            
@@ -100,6 +100,7 @@
           document.getElementsByName("Name")[0].value = name;
 	  document.getElementsByName("Name2")[0].value = name2;	
           document.getElementsByName("Upic")[0].value = upic;
+	 document.getElementsByName("number1")[0].value = number1;	
         });
       }
 
@@ -112,7 +113,7 @@
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
           var y = document.getElementById("tel");
-          var z = document.getElementById("phone");
+          var number1 = document.getElementById("number1");
 
 
           liff
