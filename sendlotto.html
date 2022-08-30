@@ -51,23 +51,17 @@
             <tr><td><b>สวัสดีคุณ : </b></td>    
              <td><input type="text" name="UName" id="uname" required="" /></td>
             </tr>
-             <tr><td><b>ชื่อสกุล: </b></td>
+             <tr><td><b>Name : </b></td>
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
-	    <tr><td><b>เบอร์โทร: </b></td>
-             <td><input type="tel" name="tel" id="tel" required="" /></td>
+	    <tr><td><b>Name2 : </b></td>
+             <td><input type="text" name="Name2" id="name" required="" /></td>
             </tr>
-             <tr><td><b>หมายเลขที่1 </b></td>
-            <td><input type="tel" name="number1" id="number1"  required="" /></td>
+                      <tr><td><b>Email : </b></td>
+            <td><input type="text" name="Email" id="email"  required="" /></td>
             </tr>
-            <tr><td><b>หมายเลขที่2 </b></td>
-            <td><input type="tel" name="number2" id="number2"  required="" /></td>
-	     <tr><td><b>หมายเลขที่3 </b></td>
-            <td><input type="tel" name="number3" id="number3"  required="" /></td>
-	    <tr><td><b>หมายเลขที่4 </b></td>
-            <td><input type="tel" name="number4" id="number4"  required="" /></td>
-	     <tr><td><b>หมายเลขที่5 </b></td>
-            <td><input type="tel" name="number5" id="number5"  required="" /></td>
+            <tr><td><b>Phone no. : </b></td>
+            <td><input type="number" name="Phone" id="phone"  required="" /></td>
             </tr>
         
            
@@ -104,6 +98,9 @@
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("Name")[0].value = name;
+	  document.getElementsByName("Name2")[0].value = name2;	
+          document.getElementsByName("Upic")[0].value = upic;
+	  document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
         });
       }
 
@@ -117,10 +114,10 @@
           var name = document.getElementById("name");
           var tel = document.getElementById("tel");
           var number1 = document.getElementById("number1");
-	  var number2 = document.getElementById("number2");
-	  var number3 = document.getElementById("number3");
-	  var number4 = document.getElementById("number4");
-	  var number5 = document.getElementById("number5");
+          var number2 = document.getElementById("number2");
+          var number3 = document.getElementById("number3");
+          var number4 = document.getElementById("number4");
+ 	  var number5 = document.getElementById("number5");
 
 
           liff
@@ -129,7 +126,6 @@
                 type: "flex",
                 altText: "ส่งเกมส์ทายหวย",
                 contents: {
-  
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -291,7 +287,7 @@
       },
       {
         "type": "text",
-        "text": "ผู้ส่ง:"+ name.value,
+        "text": "ชื่อผู้ส่ง : "+ name.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -303,7 +299,7 @@
       },
       {
         "type": "text",
-        "text": "ชื่อไลน์:" + name,
+        "text":  "ชื่อไลน์" + name, 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -315,7 +311,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ tel.value,
+        "text": "หมายเลขโทรศัพท์:",
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -350,11 +346,7 @@
       }
     ]
   }
-}		
-			
-			
-			
-			
+}
 //   "type": "bubble",
 //   "hero": {
 //     "type": "image",
