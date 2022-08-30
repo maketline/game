@@ -97,15 +97,14 @@
           .catch(err => {});
       }
 
-      function getid() {
+  function getid() {
         liff.getProfile().then(function(profile) {
           const uid = profile.userId;
           const uname = profile.displayName;
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
-          document.getElementsByName("Name")[0].value = name;
+          document.getElementsByName("UName")[0].value = uname;
           document.getElementsByName("Upic")[0].value = upic;
-	  document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
         });
       }
 
@@ -114,8 +113,8 @@
 
         document.getElementById("submit").addEventListener("click", function() {
           liff.getProfile().then(profile => {
-            var profile = profile.displayName;
-            var picURL = profile.pictureUrl;
+          var profile = profile.displayName;
+           var picURL = profile.pictureUrl;
           var name = document.getElementById("name");
           var tel = document.getElementById("tel");
           var number1 = document.getElementById("number1");
