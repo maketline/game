@@ -55,7 +55,7 @@
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
                       <tr><td><b>Email : </b></td>
-            <td><input type="text" name="Email" id="email"  required="" /></td>
+            <td><input type="text" name="tel" id="tel"  required="" /></td>
             </tr>
             <tr><td><b>Phone no. : </b></td>
             <td><input type="number" name="Phone" id="phone"  required="" /></td>
@@ -107,7 +107,7 @@
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
-          var y = document.getElementById("email");
+          var y = document.getElementById("tel");
           var z = document.getElementById("phone");
 
 
@@ -290,7 +290,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์" + name, 
+        "text":  "ชื่อไลน์: " + name, 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -302,7 +302,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:",
+        "text": "หมายเลขโทรศัพท์:" + y.value,,
         "wrap": true,
         "size": "sm",
         "align": "start",
