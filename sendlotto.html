@@ -57,17 +57,11 @@
 	    <tr><td><b>tel : </b></td>
              <td><input type="tel" name="tel" id="tel" required="" /></td>
             </tr>
-             <tr><td><b>Email : </b></td>
-            <td><input type="text" name="Email" id="email"  required="" /></td>
-            </tr>
-            <tr><td><b>Phone no. : </b></td>
-            <td><input type="number" name="Phone" id="phone"  required="" /></td>
-            </tr>
-        
+         
            
          </table>
          <br><br>
-         <input type="submit" name="submit" id ="submit" value="Submit"/>
+         <input type="submit" name="submit" id ="submit" value="ส่ง"/>
     </center>
   </form>
 
@@ -98,8 +92,8 @@
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("Name")[0].value = name;
+	  document.getElementsByName("tel")[0].value = tel;
 	  document.getElementsByName("number1")[0].value = number1;		
-          document.getElementsByName("Upic")[0].value = upic;
         });
       }
 
@@ -110,7 +104,7 @@
           liff.getProfile().then(profile => {
             var name = profile.displayName;
             var picURL = profile.pictureUrl;
-          var lname = document.getElementById("name");
+          var x = document.getElementById("name");
           var tel = document.getElementById("tel");
           var number1 = document.getElementById("number1");
 
@@ -283,7 +277,7 @@
       },
       {
         "type": "text",
-        "text": "ผู้ส่ง:"+ lname.value,
+        "text": "ผู้ส่ง:"+ name.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
