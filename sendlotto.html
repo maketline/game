@@ -51,10 +51,10 @@
             <tr><td><b>สวัสดีคุณ : </b></td>    
              <td><input type="text" name="UName" id="uname" required="" /></td>
             </tr>
-             <tr><td><b>Name : </b></td>
+             <tr><td><b>ชื่อสกุล: </b></td>
              <td><input type="text" name="Name" id="name" required="" /></td>
             </tr>
-	    <tr><td><b>Name2 : </b></td>
+	    <tr><td><b>เบอร์โทร: </b></td>
              <td><input type="tel" name="tel" id="tel" required="" /></td>
             </tr>
              <tr><td><b>หมายเลขที่1 </b></td>
@@ -104,7 +104,12 @@
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("Name")[0].value = name;
-	  document.getElementsByName("Name2")[0].value = name2;	
+	  document.getElementsByName("tel")[0].value = tel;	
+	  document.getElementsByName("number1")[0].value = number1;	
+	  document.getElementsByName("number2")[0].value = number2;
+	  document.getElementsByName("number3")[0].value = number3;
+	  document.getElementsByName("number4")[0].value = number4;
+	  document.getElementsByName("number5")[0].value = number5;	
           document.getElementsByName("Upic")[0].value = upic;
         });
       }
@@ -223,7 +228,7 @@
               },
               {
                 "type": "text",
-                "text": "หมายเลขที่ทายคือ:"+ number3.value,,
+                "text": "หมายเลขที่ทายคือ:"+ number3.value,
                 "weight": "bold",
                 "margin": "sm",
                 "flex": 0
@@ -317,7 +322,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:"+ tel.value,, 
+        "text": "หมายเลขโทรศัพท์:"+ tel.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
