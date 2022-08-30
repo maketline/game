@@ -104,7 +104,6 @@
           const upic = profile.pictureUrl;
           document.getElementsByName("Uid")[0].value = uid;
           document.getElementsByName("Name")[0].value = name;
-	  document.getElementsByName("Name2")[0].value = name2;	
           document.getElementsByName("Upic")[0].value = upic;
 	  document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
         });
@@ -115,7 +114,7 @@
 
         document.getElementById("submit").addEventListener("click", function() {
           liff.getProfile().then(profile => {
-            var name = profile.displayName;
+            var profile = profile.displayName;
             var picURL = profile.pictureUrl;
           var name = document.getElementById("name");
           var tel = document.getElementById("tel");
@@ -305,7 +304,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์" + name, 
+        "text":  "ชื่อไลน์:" + profile, 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -317,7 +316,7 @@
       },
       {
         "type": "text",
-        "text": "หมายเลขโทรศัพท์:",
+        "text": "หมายเลขโทรศัพท์:"+ tel.value,
         "wrap": true,
         "size": "sm",
         "align": "start",
