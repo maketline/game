@@ -108,11 +108,12 @@
         //button1
 
         document.getElementById("submit").addEventListener("click", function() {
+          liff.getProfile().then(profile => {
+            var name = profile.displayName;
+            var picURL = profile.pictureUrl;
           var x = document.getElementById("name");
           var y = document.getElementById("email");
           var z = document.getElementById("phone");
-	  var p = document.getElementById("pictureUrl");
-		
 
 
           liff
@@ -124,7 +125,7 @@
   "type": "bubble",
   "hero": {
     "type": "image",
-       "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+      "url": ""+picURL,
     "size": "full",
     "aspectRatio": "20:13",
     "aspectMode": "cover",
@@ -139,7 +140,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "Name : "+ x.value
+        "text": "สวัสดีคุณ" + name + "Name : "+ x.value
       }
     ]
   }
@@ -150,9 +151,9 @@
             .then(function() {
               liff.closeWindow();
             });
+            });
         });
       }
-
 
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhgOhbI16JmFkjeqpXpBRDf0gagabznglfYcAEjfyQNiBLkIUDBwxLiZDtK8yVHx_onw/exec'
             const form = document.forms['google-sheet']
