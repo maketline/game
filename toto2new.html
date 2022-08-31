@@ -115,7 +115,7 @@
        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
     </div>
-<center> <img id="Upic" class="img-circle" alt="Cinque Terre" width="50" height="50"></center>
+<center> <img id="picURL" class="img-circle" alt="Cinque Terre" width="50" height="50"></center>       
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://promotions.co.th/wp-content/uploads/2020/02/Uf.jpg" class="d-block w-100" alt="...">
@@ -237,6 +237,7 @@
             const uid = profile.userId;
             const uname = profile.displayName;
             const upic = profile.pictureUrl;
+	    document.getElementById("picURL").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
             document.getElementsByName("Uid")[0].value = uid;
             document.getElementsByName("UName")[0].value = uname;
             document.getElementsByName("Upic")[0].value = upic;
