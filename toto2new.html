@@ -99,7 +99,7 @@
         });
       }
 
-       function testclick() {
+      function testclick() {
         //button1
 
         document.getElementById("submit").addEventListener("click", function() {
@@ -117,7 +117,6 @@
                 type: "flex",
                 altText: "This is a Flex Message",
                 contents: {
- {
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -291,7 +290,7 @@
       },
       {
         "type": "text",
-        "text":  "ชื่อไลน์" + name,
+        "text":  "ชื่อไลน์" + name, 
         "wrap": true,
         "size": "sm",
         "align": "start",
@@ -338,7 +337,30 @@
       }
     ]
   }
-}
+}			
+//   "type": "bubble",
+//   "hero": {
+//     "type": "image",
+//       "url": ""+picURL,
+//     "size": "full",
+//     "aspectRatio": "20:13",
+//     "aspectMode": "cover",
+//     "action": {
+//       "type": "uri",
+//       "uri": "http://linecorp.com/"
+//     }
+//   },
+//   "body": {
+//     "type": "box",
+//     "layout": "vertical",
+//     "contents": [
+//       {
+//         "type": "text",
+//         "text": "สวัสดีคุณ" + name + "Name : "+ x.value
+//       }
+//     ]
+//   }
+// }
               }
             ])
 
@@ -348,6 +370,16 @@
             });
         });
       }
+              }
+            ])
+
+            .then(function() {
+              liff.closeWindow();
+            });
+            });
+        });
+      }
+
 
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhgOhbI16JmFkjeqpXpBRDf0gagabznglfYcAEjfyQNiBLkIUDBwxLiZDtK8yVHx_onw/exec'
             const form = document.forms['google-sheet']
