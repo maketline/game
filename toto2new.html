@@ -158,9 +158,9 @@
     </button>
   </div>
           </div>
-<img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="25" height="25">
-<!--   <p id="userId"></p> -->
-<!--   <center><p id="displayName"></p></center>
+<img id="pictureUrl" class="img-circle" alt="Cinque Terre" width="50" height="50">
+ <p id="userId"></p> 
+ <center><p id="displayName"></p></center>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>  -->
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
@@ -168,10 +168,10 @@
     function runApp() {
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
-        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
-//         document.getElementById("displayName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้
-        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;  // แสดงสถานะของผู้ใช้ Line
-        //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
+         document.getElementById("displayName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้
+        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;  // แสดงสถานะของผู้ใช้ Line
+        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657132355-K9v9jD68" }, () => { // นำ LIFF ID มาใส่
