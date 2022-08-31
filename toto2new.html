@@ -106,6 +106,7 @@
   thmonth[now.getMonth()]+ " " + (0+now.getYear()+ 2443));
   </script></p></h6>
                   </div>
+
               </nav>
        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -157,7 +158,36 @@
     </button>
   </div>
           </div>
-  
+   <script>
+    function runApp() {
+      liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;  // แสดงรูป Profile ที่ดึงมา
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
+        document.getElementById("displayName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้
+        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;  // แสดงสถานะของผู้ใช้ Line
+        //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+      }).catch(err => console.error(err));
+    }
+    liff.init({ liffId: "1654032238-AJNQ68xd" }, () => { // นำ LIFF ID มาใส่
+      if (liff.isLoggedIn()) {
+        runApp()
+      } else {
+        liff.login();
+      }
+    }, err => console.error(err.code, error.message));
+
+// logout
+    const accessToken = liff.getAccessToken();
+if (accessToken) {
+  fetch("https://api...", {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`
+    }
+    //...
+  });
+}
+  </script> 
       <div class="container">
           <div class="row">
               <div class="col">
