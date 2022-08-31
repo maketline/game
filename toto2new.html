@@ -114,7 +114,7 @@
       <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
-    </div>
+    </div>  
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://promotions.co.th/wp-content/uploads/2020/02/Uf.jpg" class="d-block w-100" alt="...">
@@ -168,11 +168,12 @@
 							<div class="form-group col-md-12 center">
 							<div class="form-row">
 	 <div class="form-group col-md-6">
-       <center> <img id="picURL" class="img-circle" alt="Cinque Terre" width="50" height="50"></center>       	 
-      <label for="number1">สวัสดีคุณ:</label>
+      <center> <img id="picURL" class="img-circle" alt="Cinque Terre" width="50" height="50">
+       document.getElementById("UName").innerHTML = '<b>สวัสดี:</b> ' + profile.displayName; // แสดงชื่อ Line ของผู้ใช้	 </center>   
+<!--       <label for="number1">สวัสดีคุณ:</label>
       <input type="text" name="UName" id="uname" readonly>
        <p id="uid" name="Uid"></p>
-          <img id="upic" name="Upic" width="25%"> 
+          <img id="upic" name="Upic" width="25%">  -->
     </div>
         <div class="form-group col-md-6">
       <label for="number1">ชื่อของท่าน</label>
@@ -480,17 +481,17 @@
         "type": "button",
         "action": {
           "type": "uri",
-          "label": "เยี่ยมชมร้านค้า",
-          "uri": "https://shop.line.me/@tjj3754a"
+          "label": "ยืนยันการส่ง",
+          "uri": "http://linecorp.com/"
         },
         "style": "primary"
       },
-       {
+      {
         "type": "button",
         "action": {
-          "type": "postback",
-          "data": "โปรโมชั่นวันนี้",
-          "label": "โปรโมชั่นวันนี้"
+          "type": "uri",
+          "label": "แก้ไข",
+          "uri": "http://linecorp.com/"
         },
         "style": "primary",
         "margin": "xs",
