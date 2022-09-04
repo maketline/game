@@ -218,6 +218,31 @@ id='visto' value=''> ยอมรับเงื่อนไขตามตก�
 			</div>
 		</div>
 	</div>
+	  
+    <div id="bn-root"></div>
+
+    <script>window.onload = function() { BN.init({ version: '1.0' }) }</script>
+    <script>
+        (function(d, s, id) {
+            var js, bjs = d.getElementsByTagName(s)[0];
+            if(d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://console.botnoi.ai/customerchat/index.js';
+            bjs.parentNode.insertBefore(js, bjs);
+        } (document, 'script', 'bn-jssdk'));
+    </script>
+
+    <div class="bn-customerchat"
+        bot_id="63140518a5f6b1e27fb085f1"
+        bot_logo="https://bn-sme-production.s3.amazonaws.com/profile/649d435f-0c6e-4107-b4a3-d88ba93806df.png"
+        bot_name="OPTIONAL ATTRIBUTE, YOU CAN CHANGE YOUR CHATBOT DISPLAYNAME"
+        theme_color="OPTIONAL ATTRIBUTE, YOU CAN CHANGE YOUR CHAT THERE WITH HEX COLOR CODE[Ex. #000000]"
+        locale="OPTIONAL ATTRIBUTE, YOU CAN CHANGE LANGUAGE TO THAI LANGUAGE [EX. th]"
+        logged_in_greeting="OPTIONAL ATTRIBUTE, YOU CAN CHANGE GREETING MESSAGE IN WELCOME"
+        greeting_message="OPTIONAL ATTRIBUTE, YOU CAN CHANGE GREETING MESSAGE IN CHATROOM"
+        default_open="OPTIONAL ATTRIBUTE, YOU CAN SET DEFULT TO SHOW OR HIDE CHATROOM [EX. true]">
+    </div>
+  
     <script type="text/javascript">
       
        window.onload = function() {
