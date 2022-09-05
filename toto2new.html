@@ -51,45 +51,30 @@
       </style>
     </head>
   <body>
-  <!--   <form method="post" autocomplete="off" name="google-sheet">
-        <center><br><br>
-           <h1>ทายเลข2ตัว</h1><br>
-          <p id="uid" name="Uid"></p>
-          <img id="upic" name="Upic" width="25%">
-           <table border="5">	
-              <tr><td><b>สวัสดีคุณ : </b></td>
-               <td><input type="text" name="UName" id="uname" readonly></td>
-              </tr>
-               <tr><td><b>ชื่อของท่าน : </b></td>
-               <td><input type="text" name="Name" id="name" required="" /></td>
-              </tr>
-            <tr><td><b>เบอร์โทรติดต่อ : </b></td>
-               <td><input type="tel" name="tel" id="tel" required="" /></td>
-              </tr>
-          <tr><td><b>เบอร์ที่1 : </b></td>
-               <td><input type="tel" name="number1" id="number1" required="" /></td>
-              </tr>
-               <tr><td><b>เบอร์ที่2 : </b></td>
-              <td><input type="tel" name="number2" id="number2"  required="" /></td>
-              </tr>
-              <tr><td><b>เบอร์ที่3 : </b></td>
-              <td><input type="tel" name="number3" id="number3"  required="" /></td>
-              </tr>
-           <tr><td><b>เบอร์ที่4 : </b></td>
-              <td><input type="tel" name="number4" id="number4"  required="" /></td>
-              </tr>
-           <tr><td><b>เบอร์ที่5 : </b></td>
-              <td><input type="tel" name="number5" id="number5"  required="" /></td>
-              </tr>
-          
-             
-           </table>
-           <br><br>
-           <input type="submit" name="submit" id ="submit" value="ส่งผลทาย"/>
-      </center>
-    </form> -->
-   <form method="post" autocomplete="off" name="google-sheet">
-  <div class="container">
+  <div class="container">	
+     <form class="was-validated" method="post" autocomplete="off" name="google-sheet">
+      <h1>ลงทะเบียน</h1><br>
+        <p id="uid" name="Uid"></p>
+        <img id="upic" name="Upic" width="25%">     
+   <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">ผู้แนะนำ:</label>
+      <input type="text" class="form-control" name="UName" id="uname" placeholder="ข้อมูลผู้แนะนำ"  readonly>
+      <div class="valid-feedback">ผ่าน</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>	
+  <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">รหัสผู้แนะนำ:</label>
+      <input type="text" class="form-control" name="Name" id="name" placeholder="ข้อมูลผู้แนะนำ"  required>
+      <div class="valid-feedback">ผ่าน</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>	
+  <div class="mb-3">
+    <button class="btn btn-primary" id ="submit" type="submit" >ส่งข้อความ</button>
+  </div>
+</form>
+</div>
+<!--    <form method="post" autocomplete="off" name="google-sheet">
+<!--   <div class="container">
           <div class="col-lg-6 col-md-8 mx-auto mt-5">
               <nav class="navbar navbar-expand-lg navbar-dark bd-indigo-500">
                   <div class="container">
@@ -217,33 +202,10 @@ id='visto' value=''> ยอมรับเงื่อนไขตามตก�
 				</form>
 			</div>
 		</div>
-	</div>
-	  
+	</div> -->
+	
    
-    <div id="bn-root"></div>
-
-    <script>window.onload = function() { BN.init({ version: '1.0' }) }</script>
-    <script>
-        (function(d, s, id) {
-            var js, bjs = d.getElementsByTagName(s)[0];
-            if(d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://console.botnoi.ai/customerchat/index.js';
-            bjs.parentNode.insertBefore(js, bjs);
-        } (document, 'script', 'bn-jssdk'));
-    </script>
-
-    <div class="bn-customerchat"
-        bot_id="63140518a5f6b1e27fb085f1"
-        bot_logo="https://bn-sme-production.s3.amazonaws.com/profile/649d435f-0c6e-4107-b4a3-d88ba93806df.png"
-        bot_name="OPTIONAL ATTRIBUTE, YOU CAN CHANGE YOUR CHATBOT DISPLAYNAME"
-        theme_color="OPTIONAL ATTRIBUTE, YOU CAN CHANGE YOUR CHAT THERE WITH HEX COLOR CODE[Ex. #000000]"
-        locale="OPTIONAL ATTRIBUTE, YOU CAN CHANGE LANGUAGE TO THAI LANGUAGE [EX. th]"
-        logged_in_greeting="OPTIONAL ATTRIBUTE, YOU CAN CHANGE GREETING MESSAGE IN WELCOME"
-        greeting_message="OPTIONAL ATTRIBUTE, YOU CAN CHANGE GREETING MESSAGE IN CHATROOM"
-        default_open="OPTIONAL ATTRIBUTE, YOU CAN SET DEFULT TO SHOW OR HIDE CHATROOM [EX. true]">
-    </div>
-  
+   
   
     <script type="text/javascript">
       
