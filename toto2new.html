@@ -189,15 +189,60 @@ id='visto' value=''> ยอมรับเงื่อนไขตามตก�
    <div class="mb-3 mt-3">
       <label for="uname" class="form-label">Lineที่ใช้ร่วมกิจกรรม:</label>
       <input type="text" class="form-control" name="UName" id="uname" placeholder="ข้อมูลผู้แนะนำ"  readonly>
-      <div class="valid-feedback">ผ่าน</div>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>	
   <div class="mb-3 mt-3">
       <label for="uname" class="form-label">ระบุชื่อของท่าน</label>
       <input type="text" class="form-control" placeholder="ระบุชื่อของท่าน" id="lname"  name="lname" required>
-      <div class="valid-feedback">ผ่าน</div>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
       <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
     </div>	
+  <div class="mb-3">
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เบอร์โทรติดต่อ</label>
+      <input type="text" class="form-control" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="ระบุเบอร์โทรติดต่อกลับ" id="tel" name="tel" maxlength="10" required>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+ <div class="mb-3">
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เลขที่1</label>
+      <input type="text" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่1" id="number1" name="number1" maxlength="2" required>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เลขที่2</label>
+      <input type="text" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่2" id="number2" name="number2" maxlength="2" required>
+     <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เลขที่3</label>
+      <input type="text" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่3" id="number3" name="number3" maxlength="2" required>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เลขที่4</label>
+      <input type="text" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่4" id="number4" name="number4" maxlength="2" required>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+ <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">เลขที่5</label>
+      <input type="text" class="form-control" pattern="[0-9]{2}"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="เลขที่5" id="number1" name="number5" maxlength="2" required>
+      <div class="valid-feedback">ป้อนข้อมูลแล้ว</div>
+      <div class="invalid-feedback">กรุณาป้อนข้อมูล</div>
+    </div>
+<div class="form-check mb-3">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <input type="checkbox" class="form-check-input" name='visto' 
+id='visto' value='' required>
+    <label class="form-check-label" for="validationFormCheck1">ยอมรับเงื่อนไขตามตกลง และยืนยันการส่งข้อมูลส่วนตัวของท่าน ข้อมูลที่ส่งมาทางร้านCrystal Diamond Olin จะใช้ในการส่งเสริมการขายและการตลาดเท่านั้นข้อมูลของท่านจะถูกรักษาไว้เป็นความลับและจะลบทิ้งเมื่อเสร็จสิ้นกิจกรร</label>
+    <div class="invalid-feedback">หากไม่ยอมรับเงื่อนนไขจะไม่สามารถร่วมกิจกรรมได้</div>
+  </div>
   <div class="mb-3">
     <button class="btn btn-primary" id ="submit" type="submit" >ส่งข้อความ</button>
   </div>
