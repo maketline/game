@@ -49,7 +49,7 @@
           }
       </style>
     </head>
-  <body>
+  <body onload="myFunction()">
   <form method="post" class="was-validated" autocomplete="off" name="google-sheet">
   <div class="container">
           <div class="col-lg-6 col-md-8 mx-auto mt-5">
@@ -197,7 +197,23 @@ id='visto' value='' required>
 			</div>
 		</div>
 </div> 
-	
+<script>
+ function myFunction() {
+ // alert("Page is loaded");
+  Swal.fire({
+  position: 'center',
+  icon: 'info',
+  title: 'แจ้งกติกาการทายหวย',
+  html:
+    '1คนต่อ1เครื่อง <br>ทายได้คนละ5 หมายเลข <br><br>----------------------------------</b><br>'+
+    'รับคำทายถึง13.00 น.</b><br> ' +'<br>----------------------------------</b><br>'+
+    'กรณีถูกรางวัลส่งสลิปคำทายพร้อมรูปมาที่ไลน์แอดมิน<br> ',
+  confirmButtonText: 'เข้าใจแล้ว',
+  showConfirmButton: true,
+  //timer: 1500
+})
+}
+</script>	
     <script type="text/javascript">
       
        window.onload = function() {
