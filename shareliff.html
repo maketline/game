@@ -13,7 +13,7 @@
 <body>
   <div class="card mt-3">
   <div class="card-body">
-    <button  class="btn btn-primary" id="btnShare" onclick="sendShare()">Share Target Picker</button>
+  <button  class="btn btn-primary" id="btnShare" onclick="sendShare()">Share</button>
   <button class="btn btn-success" id="btnLogin" onclick="liff.login()">Log In</button>
   <button class="btn btn-danger" id="btnLogOut" onclick="logOut()">Log Out</button>
   </div>
@@ -25,7 +25,7 @@
       const result = await liff.shareTargetPicker([
         {
           "type": "flex",
-          "altText": "Flex Message",
+          "altText": "มีข้อความที่ยังไม่ได้อ่าน",
           "contents": {
             "type": "bubble",
             "body": {
