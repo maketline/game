@@ -26,7 +26,9 @@
         {
           "type": "flex",
           "altText": "มีข้อความที่ยังไม่ได้อ่าน",
-          "contents": {
+          "contents": 
+//    วางFlex ตรงนี้
+  {
   "type": "bubble",
   "size": "mega",
   "header": {
@@ -339,19 +341,19 @@
     ]
   }
 }
-
+//end
         }
       ])
       if (result) {
         //alert(`[${result.status}] Message sent!`)
-        Swal.fire({
-  position: 'top-end',
-  icon: 'success',
-  title: 'ส่งข้อความเรียบร้อยแล้ว',
-  showConfirmButton: true,
-  confirmButtonText: 'เสร็จสิ้น',
- // timer: 1500
-})
+//         Swal.fire({
+//   position: 'top-end',
+//   icon: 'success',
+//   title: 'ส่งข้อความเรียบร้อยแล้ว',
+//   showConfirmButton: true,
+//   confirmButtonText: 'เสร็จสิ้น',
+//  // timer: 1500
+// })
         liff.closeWindow();
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
