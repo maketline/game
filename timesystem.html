@@ -191,7 +191,13 @@
             document.getElementById("cover").style.display="block";
             
 				}else{
-					  document.getElementById("msgStatus").innerHTML ="<h2>หมดเวลาทาหวยแล้วค่ะ ไว้โอกาสหน้ามาเล่นใหม่นะค่ะ</h2>"
+					  document.getElementById("msgStatus").innerHTML ="<p>ปิดระบบการทายเลขเรียบร้อยแล้วค่ะ</p>
+<input type="button" class="btn btn-danger"
+                     style="font-weight: bold; display: inline;"
+                     value="เสร็จสิ้น"
+                     onclick="closeMe()">
+
+</center>"
 					  document.getElementById("timer").style.display="none";
             document.getElementById("cover").style.display="none";
             // document.getElementById("btnResult").style.display="block";
@@ -781,6 +787,13 @@ id='visto' value='' required>
     });
 });
 </script>
-
+<script>
+function closeMe()
+{
+   setTimeout(window.close, 0);
+    liff.closeWindow();
+}
+                    
+</script>
 	      </body>
   </html>
