@@ -203,7 +203,7 @@
               </div> -->
 
               <div class="form-group mt-3 text-center">
-                <a class="btn btn-outline-primary" href="https://liff.line.me/1657132355-K9v9jD68" role="button">ร่วมกิจกรรมทายหวย</a>
+		<button type="button" onclick="goto() class="btn btn-outline-primary">ร่วมกิจกรรมทายหวย</button>
               </div> 
 
           </form>
@@ -212,7 +212,15 @@
       </div>
    </div>
 
- 
+ <script>
+function goto(){
+liff.closeWindow();
+liff.openWindow({
+  url: "https://liff.line.me/1657132355-K9v9jD68",
+  external: true,
+});
+}
+</script>
 
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
